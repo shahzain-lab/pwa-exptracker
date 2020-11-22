@@ -39,4 +39,4 @@ jobs:
       - name: installing surge
         run: npm install --global surge
       - name: deploying surge
-        run: surge ./build massive-sister.surge.sh --token ${{secrets.SHOES_STORE}}
+        run: surge ./build massive-sister.surge.sh --token ${{secrets.EXP_TRACKER}}
