@@ -1,5 +1,5 @@
 const CACHE_NAME = 'version-1';
-const urlsToCache = ['index.html' , 'offline.html','/static/js/bundle.js','/static/js/0.chunk.js','/static/js/main.chunk.js'];
+const urlsToCache = ['index.html' , 'offline.html'];
 
 const self = this;
 
