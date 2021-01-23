@@ -1,26 +1,23 @@
 import React from 'react';
-import {Header} from './component/Header';
-import {Balance} from './component/Balance';
-import {TransactionSummary} from './component/TransactionSummary';
-import {TransHistory} from './component/TransactionHistory';
-import {AddTransaction} from './component/AddTransaction';
-import {GlobalProvider} from './context/GlobalState';
+import { Balance } from './component/Balance';
+import { Header } from './component/Header';
 import './App.css';
+import { Summary } from './component/TransSummary';
+import { AddTrans } from './component/addTransaction';
+import { History } from './component/TransHistory';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
     <GlobalProvider>
-    <div className="Zain">
-      <Header />
-      <div className="style">
+    <Header />
+    <div className="container">
       <Balance />
-      <TransactionSummary />
-      <TransHistory />
-      <AddTransaction />
-      </div>
+      <Summary />
+      <History />
+      <AddTrans />
     </div>
-    <h3 className="copyright">2020&copy; copyright.All right reserved</h3>
-    </GlobalProvider>
+  </GlobalProvider>
   );
 }
 
