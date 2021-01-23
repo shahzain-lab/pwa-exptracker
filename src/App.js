@@ -14,7 +14,7 @@ function App() {
     <div className="container">
       <Balance />
       <Summary />
-      <History />
+      <History /> 
       <AddTrans />
     </div>
   </GlobalProvider>
