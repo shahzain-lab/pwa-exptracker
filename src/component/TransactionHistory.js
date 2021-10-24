@@ -5,8 +5,7 @@ import {  GlobalContext } from '../context/GlobalState';
 import { Transaction } from '../component/Transaction';
 
 export const TransHistory = () => {
-    const {transactions} = useContext(GlobalContext)
-    console.log(transactions)
+    const {transactions} = useContext(GlobalContext);
     return (
         <div>
         <h3 className="hist">Transaction History</h3>

@@ -1,5 +1,10 @@
 const CACHE_NAME = 'version-1';
-const urlsToCache = ['index.html' , 'offline.html'];
+const urlsToCache = [
+    'index.html',
+,    '/static/js/bundle.js',
+    '/static/js/0.chunk.js',
+    '/static/js/main.chunk.js'
+ ];
 
 const self = this;
 
@@ -16,15 +21,18 @@ self.addEventListener('install', (event) => {
 
 //requesting
 
-self.addEventListener('fetch', (event) => {
-     event.respondWith(
-         caches.match(event.request)
-         .then(() => {
-             return fetch(event.request)
-             .catch(() =>  caches.match('offline.html'))
-         })
-     )
-})
+self.addEventListener("fetch", function (event) {
+    event.respondWith(
+      caches.match(event.request).then(function (response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+        
+      })
+    );
+  });
 
 //activating sw
 
